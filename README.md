@@ -1,15 +1,16 @@
 <p align="middle">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/oppahansi/javalings/build.yml">
     <img alt="GitHub" src="https://img.shields.io/github/license/oppahansi/javalings">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/oppahansi/javalings">
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/oppahansi/javalings">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oppahansi/javalings">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+    <img alt="GitHub last commit" src="https://img.shields.io/github/all-contributors/oppahansi/javalings?color=ee8449&style=flat-square">
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 </p>
 
-# javalings ☕ 💻  (in development)
+# javalings ☕ 💻  (in development)  
 
 --- 
 
