@@ -67,18 +67,6 @@ else
 }
 Write-Host "`n"
 
-if (Get-Command gradle -ErrorAction SilentlyContinue)
-{
-    Write-Host "SUCCESS: gradle is installed" -ForegroundColor DarkCyan;
-}
-else
-{
-    Write-Host "WARNING: Gradle does not seem to be installed." -ForegroundColor DarkCyan;
-    Write-Host "Installing Gradle.." -ForegroundColor DarkCyan;
-    choco install gradle
-}
-Write-Host "`n"
-
 Write-Host "Disabling auto confirmations installations.." -ForegroundColor DarkCyan;
 choco feature disable -n=allowGlobalConfirmation
 Write-Host "`n"
