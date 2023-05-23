@@ -1,0 +1,34 @@
+plugins {
+    id 'application'
+}
+
+mainClassName = 'de.oppa.javalings.Javalings'
+
+group = 'de.oppa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.1'
+    implementation group: 'com.ongres', name: 'fluent-process', version: '1.0.1'
+
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
+}
+
+configurations {
+    compile.exclude module: 'exercises'
+}

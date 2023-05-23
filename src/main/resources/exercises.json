@@ -1,0 +1,142 @@
+[
+  {
+    "name": "intro0",
+    "packageName": "intros",
+    "path": "exercises/src/main/java/intros/Intro0.java",
+    "hint": "Remove '// I AM NOT DONE' from the code.",
+    "google": ""
+  },
+  {
+    "name": "intro1",
+    "packageName": "intros",
+    "path": "exercises/src/main/java/intros/Intro1.java",
+    "hint": "You can print something to the console using the\n\n  'System.out.println(...);'\n\nstatement. Something has to go between the '(' and ')' bracers.\n\n  System.out.println(\"Text goes between the quotation marks!\");",
+    "google": "  java hello world program\n  java how to print to console\n  java display text in console"
+  },
+  {
+    "name": "intro2",
+    "packageName": "intros",
+    "path": "exercises/src/main/java/intros/Intro2.java",
+    "hint": "You can print something to the console using the\n\n  'System.out.println(...);'\n\nstatement. Something has to go between the '(' and ')' bracers.\n\n  System.out.println(\"Text goes between the quotation marks!\");",
+    "google": "  java hello world program\n  java how to print to console\n  java display text in console"
+  },
+  {
+    "name": "intro3",
+    "packageName": "intros",
+    "path": "exercises/src/main/java/intros/Intro3.java",
+    "hint": "Almost all java statements have to end with \";\" a semicolon.\nTry to find the missing \";\" semicolon in the code.",
+    "google": "  java statements\n  java semicolon\n  java syntax"
+  },
+  {
+    "name": "intro4",
+    "packageName": "intros",
+    "path": "exercises/src/main/java/intros/Intro4.java",
+    "hint": "A code block is a section of code enclosed in \"{\" and \"}\" curly braces.\nExample pseudocode:\n\n {\n    statement;\n    statement;\n }\n\n or\n\n class ClassName {\n      methodName() {\n        statement;\n      }\n }\n\nTry to find the missing \"{\" or \"}\" curly bracers in the code.",
+    "google": "  java code blocks\n  java syntax\n  java curly bracers"
+  },
+  {
+    "name": "intro5",
+    "packageName": "intros",
+    "path": "exercises/src/main/java/intros/Intro5.java",
+    "hint": "Almost all java statements have to end with \";\" a semicolon.\nTry to find the missing \";\" semicolon in the code.\n\nAdditionally:\nA code block is a section of code enclosed in \"{\" and \"}\" curly braces.\nExample pseudocode:\n\n {\n    statement;\n    statement;\n }\n\n or\n\n class ClassName {\n      methodName() {\n        statement;\n      }\n }\n\nTry to find the missing \"{\" or \"}\" curly bracers in the code.",
+    "google": "  java code blocks\n  java syntax\n  java hello world program"
+  },
+  {
+    "name": "exam1",
+    "packageName": "exams",
+    "path": "exercises/src/main/java/exams/Exam1.java",
+    "hint": "You have seen the main Method in the previous exercises.\nIt is the starting point for every Java application.",
+    "google": " java hello world"
+  },
+  {
+    "name": "variables1",
+    "packageName": "variables",
+    "path": "exercises/src/main/java/variables/Variables1.java",
+    "hint": "Variables have a specific syntax, here is some pseudocode:\n  Datatype variableName;\n  variableName = value;\n\nShort version:\n  Datatype variableName = value;",
+    "google": "  java primitives\n  java creating variables\n  java print a number to console"
+  },
+  {
+    "name": "variables2",
+    "packageName": "variables",
+    "path": "exercises/src/main/java/variables/Variables2.java",
+    "hint": "Variables have a specific syntax, here is some pseudocode:\n  Datatype variableName;\n  variableName = value;\n\nShort version:\n  Datatype variableName = value;",
+    "google": "  java primitives default values\n  java number literals\n  java number suffix"
+  },
+  {
+    "name": "variables3",
+    "packageName": "variables",
+    "path": "exercises/src/main/java/variables/Variables3.java",
+    "hint": "Variables have a specific syntax, here is some pseudocode:\n  Datatype variableName;\n  variableName = value;\n\nShort version:\n  Datatype variableName = value;",
+    "google": "  java primitives\n  java char\n  java boolean"
+  },
+  {
+    "name": "exam2",
+    "packageName": "exams",
+    "path": "exercises/src/main/java/exams/Exam2.java",
+    "hint": "Variables have a specific syntax, here is some pseudocode:\n  Datatype variableName;\n  variableName = value;\n\nShort version:\n  Datatype variableName = value;\n  \nYou can create most variables the same old way,\nexcept now you use 'var' as the datatype:\n\n  var variableName = value;\n\nOnly 'byte' and 'short' variables will need some extra work.\nYou  will need type casting.\n\nExample pseudocode to cast Datatype2 into Datatype1:\n  Datatype1 variableName = (Datatype2) value;",
+    "google": "  java var keyword\n  java cast number to byte / short\n  java type casting\n  java primitives\n  java number literals"
+  },
+  {
+    "name": "primitives1",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives1.java",
+    "hint": "Arithmetic operations such as '+ - / *' etc. will by default result in an integer.\nYou need to explicitly tell the compiler that the result is indeed a byte.",
+    "google": "  java primitives\n  java creating variables\n  java type casting\n  java arithmetic operation on byte\n  java byte max size"
+  },
+  {
+    "name": "primitives2",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives2.java",
+    "hint": "Arithmetic operations such as '+ - / *' etc. will by default result in an integer.\nYou need to explicitly tell the compiler that the result is indeed a short.",
+    "google": "  java primitives\n  java type casting\n  java arithmetic operation on short\n  java short max size"
+  },
+  {
+    "name": "primitives3",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives3.java",
+    "hint": "Remember how to create variables from the previous exercises.",
+    "google": "  java primitives\n  java creating variables\n  java integer max size"
+  },
+  {
+    "name": "primitives4",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives4.java",
+    "hint": "Some primitive data types require an explicit number literal when defining a value.",
+    "google": "  java primitives\n  java creating variables\n  java float\n  java number literals\n  java long max size"
+  },
+  {
+    "name": "primitives5",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives5.java",
+    "hint": "Some primitive data types require an explicit number literal when defining a value.",
+    "google": "  java primitives\n  java creating variables\n  java float\n  java number literals\n  java floating point operations"
+  },
+  {
+    "name": "primitives6",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives6.java",
+    "hint": "Some primitive data types require an explicit number literal when defining a value.",
+    "google": "  java primitives\n  java creating variables\n  java double\n  java number literals\n  java floating point operations"
+  },
+  {
+    "name": "primitives7",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives7.java",
+    "hint": "There is nothing special here.\nJust create a variable of type boolean and assign the required value.",
+    "google": "  java primitives\n  java creating variables\n  java boolean\n  java boolean operations"
+  },
+  {
+    "name": "primitives8",
+    "packageName": "datatypes.primitives",
+    "path": "exercises/src/main/java/datatypes/primitives/Primitives8.java",
+    "hint": "Arithmetic operations such as '+ - / *' etc. will by default result in an integer.\nYou need to explicitly tell the compiler that the result is indeed a char.",
+    "google": "  java primitives\n  java creating variables\n  java char\n  java char concatenation"
+  },
+  {
+    "name": "strings1",
+    "packageName": "datatypes.strings",
+    "path": "exercises/src/main/java/datatypes/strings/Strings1.java",
+    "hint": "The mathematical '+' sign works on Strings.\nInstead of 'adding' the Strings it combines the two into a new String.",
+    "google": "  java add two strings\n  java string concatenation\n  java string formatted"
+  }
+]
