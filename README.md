@@ -1,4 +1,7 @@
 <p align="middle">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/oppahansi/javalings/build.yml">
     <img alt="GitHub" src="https://img.shields.io/github/license/oppahansi/javalings">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/oppahansi/javalings">
@@ -361,6 +364,20 @@ see [CONTRIBUTING.md](./CONTRIBUTING.md).
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/oppahansi"><img src="https://avatars.githubusercontent.com/u/3140621?v=4?s=100" width="100px;" alt="Alexander Schellenberg"/><br /><sub><b>Alexander Schellenberg</b></sub></a><br /><a href="https://github.com/oppahansi/javalings/commits?author=oppahansi" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
