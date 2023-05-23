@@ -31,6 +31,9 @@ _implement a new feature! ➡️ [open an Issue to discuss it first, then a Pull
 * All exercises are in the submodule `exercises`
   * This module is excluded from compilation / build process
   * That is necessary to avoid all the compilation errors
+* Make sure you are using the google code style
+  * [intellij-java-google-style.xml](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml) for importing
+  * [eclipse-java-google-style.xml](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml) for importing
 
 That's it. You should be ready to go.  
 In case you have difficulties open a blank issue or contact me on discord:  
