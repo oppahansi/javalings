@@ -1,5 +1,5 @@
 <p align="middle">
-    <img alt="AppVeyor" src="https://img.shields.io/appveyor/build/oppahansi/javalings">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/oppahansi/javalings/build.yml">
     <img alt="GitHub" src="https://img.shields.io/github/license/oppahansi/javalings">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/oppahansi/javalings">
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/oppahansi/javalings">
