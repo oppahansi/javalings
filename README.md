@@ -5,7 +5,7 @@
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/oppahansi/javalings">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oppahansi/javalings">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-    <img alt="GitHub last commit" src="https://img.shields.io/github/all-contributors/oppahansi/javalings?color=ee8449&style=flat-square">
+    <img alt="all-contributors" src="https://img.shields.io/github/all-contributors/oppahansi/javalings?color=ee8449&style=flat-square">
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
