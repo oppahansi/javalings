@@ -25,6 +25,8 @@ _implement a new feature! ➡️ [open an Issue to discuss it first, then a Pull
 * This is gradle project
   * Either open the folder in your IDE
   * OR import it as gradle project
+  * It should use the included gradle wrapper
+    * if it doesn't, make sure you have gradle 8.1+ installed
 * The main module is `javalings`
 * All exercises are in the submodule `exercises`
   * This module is excluded from compilation / build process
