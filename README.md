@@ -352,9 +352,26 @@ quit or exit
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
+Help in any form is welcome! If you are interested in contributing to the project please  
+see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ---
+
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
+---
+
 
 # TODO
 ### javalings commands
