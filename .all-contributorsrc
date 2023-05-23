@@ -2,7 +2,7 @@
   "files": [
     "README.md"
   ],
-  "badgeTemplate": "<img alt="GitHub last commit" src="https://img.shields.io/github/all-contributors/<%= projectOwner %>/<%= projectName %>?color=ee8449&style=flat-square">",
+  "badgeTemplate": "[<img alt="GitHub last commit" src="https://img.shields.io/github/all-contributors/<%= projectOwner %>/<%= projectName %>?color=ee8449&style=flat-square">](#contributors)",
   "imageSize": 100,
   "commit": false,
   "commitConvention": "angular",
