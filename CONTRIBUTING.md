@@ -34,6 +34,7 @@ _implement a new feature! ➡️ [open an Issue to discuss it first, then a Pull
 * Make sure you are using the google code style
   * [intellij-java-google-style.xml](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml) for importing
   * [eclipse-java-google-style.xml](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml) for importing
+  * Then set hard wrap at to 120 columns
 
 That's it. You should be ready to go.  
 In case you have difficulties open a blank issue or contact me on discord:  
