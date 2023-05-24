@@ -81,6 +81,6 @@ Write-Host "`n"
 
 ` cd javalings/
 
-Write-Host "All done! Run '.\javaligns.bat watch' to get started." -ForegroundColor DarkCyan;
+Write-Host "All done! Run '.\javalings.bat watch' to get started." -ForegroundColor DarkCyan;
 Write-Host "In case you saw any red text / errors, please make sure to rerun the install script with admin rights." -ForegroundColor Cyan;
 Write-Host "`n"
