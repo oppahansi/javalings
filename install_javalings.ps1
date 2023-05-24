@@ -12,20 +12,20 @@ else
 {
     Write-Host "WARNING: Chocolatey does not seem to be installed." -ForegroundColor DarkCyan;
     Write-Host "Installing Chocolatey package manager.." -ForegroundColor DarkCyan;
-    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install_dependencies.ps1'));
+    ` iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install_dependencies.ps1'));
 }
 Write-Host "`n"
 
 
 Write-Host "Refreshing environment varibales..." -ForegroundColor DarkCyan;
-refreshenv
+` refreshenv
 Write-Host "`n"
 
 Write-Host " Enabling color codes in consoles..." -ForegroundColor DarkCyan;
-Set-ItemProperty HKCU:\Console VirtualTerminalLevel -Type DWORD 1
+` Set-ItemProperty HKCU:\Console VirtualTerminalLevel -Type DWORD 1
 
 Write-Host "Enabling auto confirmations for pre requisites installations.." -ForegroundColor DarkCyan;
-choco feature enable -n=allowGlobalConfirmation
+` choco feature enable -n=allowGlobalConfirmation
 Write-Host "`n"
 
 
@@ -63,13 +63,23 @@ else
 {
     Write-Host "WARNING: Git does not seem to be installed." -ForegroundColor DarkCyan;
     Write-Host "Installing Git..." -ForegroundColor DarkCyan;
-    choco install git
+    ` choco install git
 }
 Write-Host "`n"
 
-Write-Host "Disabling auto confirmations installations.." -ForegroundColor DarkCyan;
-choco feature disable -n=allowGlobalConfirmation
+Write-Host "Refreshing environment varibales..." -ForegroundColor DarkCyan;
+refreshenv
 Write-Host "`n"
+
+Write-Host "Disabling auto confirmations installations.." -ForegroundColor DarkCyan;
+` choco feature disable -n=allowGlobalConfirmation
+Write-Host "`n"
+
+Write-Host "Cloning javalings repository..." -ForegroundColor DarkCyan;
+` git clone https://github.com/oppahansi/javalings.git
+Write-Host "`n"
+
+` cd javalings/
 
 Write-Host "All done! Run '.\javaligns.bat watch' to get started." -ForegroundColor DarkCyan;
 Write-Host "`n"
