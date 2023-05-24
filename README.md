@@ -55,11 +55,7 @@ Start-BitsTransfer -Source https://raw.githubusercontent.com/oppahansi/javalings
 ```
 
 This will install the required dependencies and clone the repository in the current folder.  
-Once everything is done, navigate inside the `javalings` folder.  
-
-```ps1
-cd javalings
-```
+At the end it will clone the repository and navigate inside the javalings folder.
 
 If you get a permission denied message, you might have to exclude the directory where you cloned javalings in your antivirus.
 
