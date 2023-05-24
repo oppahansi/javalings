@@ -32,3 +32,9 @@ run {
 configurations {
     compile.exclude module: 'exercises'
 }
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}

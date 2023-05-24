@@ -121,8 +121,9 @@ fix(list): make sure list doesn't self-destruct
 The scope within the brackets is optional, but should be any of these:
 
 - `installation` (for the installation script)
+- `build` (for the build changes)
 - `cli` (for general CLI changes)
-- ``cmd`` (for command changes)
+- `cmd` (for command changes)
 - `watch` (for the watch functionality source)
 - `run` (for the run functionality source)
 - `EXERCISENAME` (if you're changing a specific exercise, or set of exercises,
