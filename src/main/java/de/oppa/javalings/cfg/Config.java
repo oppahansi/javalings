@@ -22,7 +22,7 @@ public class Config {
   public static final String I_AM_NOT_DONE = "// I AM NOT DONE";
   public static final String RUN_EXERCISE_CMD = "java -cp build %s";
   public static final String RESET_EXERCISE_CMD = "git checkout HEAD -- %s";
-  public static final String EXCERCISES_INFO_PATH = "src/main/resources/exercises.json";
+  public static final String EXERCISES_INFO_PATH = "src/main/resources/exercises.json";
   public static final String EXERCISES_JAVA_BASE_PATH = "exercises/src/main/java/";
   public static final String USAGE_DESCRIPTION = """
       Javalings usage:
@@ -100,7 +100,7 @@ public class Config {
           Got all that? Great! To get started, run
           
           `.\\javalings.bat watch` on Windows or
-          `./javalings.bat watch` on MacOs / Linux
+          `./javalings.sh watch` on MacOs / Linux
           
           in order to get the first unsolved exercise.
           

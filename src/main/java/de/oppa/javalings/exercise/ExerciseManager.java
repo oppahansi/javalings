@@ -19,7 +19,7 @@ public class ExerciseManager {
 
   public static List<Exercise> readExercises() throws IOException {
     List<Exercise> exercises = new ArrayList<>();
-    File jsonFile = new File(Config.EXCERCISES_INFO_PATH);
+    File jsonFile = new File(Config.EXERCISES_INFO_PATH);
     ObjectMapper mapper = new ObjectMapper();
     List<ExerciseInfo> exerciseInfos = mapper.readValue(jsonFile, new TypeReference<>() {
     });
