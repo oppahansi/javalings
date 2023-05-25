@@ -387,11 +387,12 @@ see [CONTRIBUTING.md](./CONTRIBUTING.md).
 ---
 
 
-# TODO
+# TODO (contributions welcome)
 ### javalings commands
 * [x] help
 * [x] watch (without automatically jump to next exercise)
 * [x] list
+  * [ ] better display of unsolved items
 * [x] run
 * [x] reset
 
@@ -413,11 +414,33 @@ see [CONTRIBUTING.md](./CONTRIBUTING.md).
 * [ ] exams
 * [x] variables (first version, still unsure)
 * [x] primitive datatypes (first version, still unsure)
+* [ ] comments
+* [ ] operators
+* [ ] booleans
+* [ ] conditionals
+* [ ] switch
+* [ ] loops
+* [ ] arrays
+* [ ] foreach
+* [ ] lists
+* [ ] basic sorting of elements
+* [ ] basic searching of elements
+* [ ] basic summing of elements
+* [ ] classes 
+* [ ] packages
 * [ ] complex datatypes
+* [ ] methods
+* [ ] getter setter
+* [ ] imports
+* [ ] enums
+* [ ] interfaces
+* [ ] inheritance
+* [ ] polymorphism
+* [ ] Method overloading / overriding
 * [ ] ... more coming soon
 
 ### Others
-* [ ] add allcontributors bot
+* [x] add allcontributors bot
 * [ ] rethink exercise order and structure
 * [ ] watch mode optimisation? Better implementation?
 * [ ] gitpod / codespaces ?
