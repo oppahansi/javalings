@@ -109,12 +109,13 @@ public class Javalings {
     Exercise exercise;
 
     if (exerciseName.equals(Config.NEXT_OPT)) {
-      int nextExerciseIndex = exerciseRunner == null ? 0 : exercises.indexOf(exerciseRunner.getExercise()) + 1;
+      int nextExerciseIndex = findNextExerciseIndex();
       if (nextExerciseIndex >= exercises.size() && exerciseRunner != null) {
         System.out.println("All Exercises have been completed. Good job!!");
         quit();
         System.exit(0);
       }
+
       exercise = exercises.get(nextExerciseIndex);
     } else {
       exercise = findExercise(exerciseName);
@@ -128,6 +129,18 @@ public class Javalings {
     exerciseRunner.watch();
 
     waitForInput();
+  }
+
+  private static int findNextExerciseIndex() {
+    if (exerciseRunner == null) {
+      return IntStream.range(0, exercises.size()).filter(i -> !exercises.get(i).isDone())
+          .findFirst().orElse(0);
+    }
+
+    int currentIndex = exercises.indexOf(exerciseRunner.getExercise());
+
+    return IntStream.range(currentIndex + 1, exercises.size()).filter(i -> !exercises.get(i).isDone())
+        .findFirst().orElse(currentIndex);
   }
 
   private static void waitForInput() throws Exception {
