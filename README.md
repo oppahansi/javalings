@@ -414,6 +414,7 @@ see [CONTRIBUTING.md](./CONTRIBUTING.md).
 * [ ] exams
 * [x] variables (first version, still unsure)
 * [x] primitive datatypes (first version, still unsure)
+* [ ] strings basics
 * [ ] comments
 * [ ] operators
 * [ ] booleans
@@ -429,6 +430,7 @@ see [CONTRIBUTING.md](./CONTRIBUTING.md).
 * [ ] classes 
 * [ ] packages
 * [ ] complex datatypes
+* [ ] strings advanced
 * [ ] methods
 * [ ] getter setter
 * [ ] imports
@@ -437,6 +439,8 @@ see [CONTRIBUTING.md](./CONTRIBUTING.md).
 * [ ] inheritance
 * [ ] polymorphism
 * [ ] Method overloading / overriding
+* [ ] instanceof
+* [ ] stream api
 * [ ] ... more coming soon
 
 ### Others
