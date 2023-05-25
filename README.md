@@ -10,6 +10,10 @@
 
 </p>
 
+<p align="middle">
+<img alt="GitHub last commit" src="https://img.shields.io/badge/status-in%20development-blue">
+</p>
+
 # javalings ☕ 💻  (in development)  
 
 --- 
