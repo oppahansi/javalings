@@ -43,8 +43,8 @@ public class Javalings {
     String incompleteBar = barChar.repeat((int) incompleteProgress);
 
     System.out.printf("Progress %d%% : [%s%s] %d/%d %n%n%n", (int) (percent * 100),
-        colorizeMessage(completeBar, Colors.GREEN_BACKGROUND),
-        colorizeMessage(incompleteBar, Colors.BLACK_BACKGROUND_BRIGHT), (int) doneExercises, exercises.size());
+        colorizeMessage(completeBar, Colors.GREEN_BG), colorizeMessage(incompleteBar, Colors.BLACK_BG_BT),
+        (int) doneExercises, exercises.size());
   }
 
   public static void clearConsole() {
@@ -57,7 +57,7 @@ public class Javalings {
   }
 
   public static void printWatchModeCommandsHint() {
-    System.out.println(Config.WATCH_COMMANDS_HINT);
+    System.out.println(Config.WATCH_CMD_HINT);
   }
 
   private static void processOptions(String[] options) throws Exception {
@@ -73,9 +73,9 @@ public class Javalings {
 
   private static void usage(boolean watchMode) {
     if (watchMode) {
-      System.out.println(Config.WATCH_MODE_USAGE_DESCRIPTION);
+      System.out.println(Config.WATCH_MODE_USAGE);
     } else {
-      System.out.println(Config.USAGE_DESCRIPTION);
+      System.out.println(Config.USAGE);
     }
   }
 
@@ -91,7 +91,7 @@ public class Javalings {
           exercise.isDone());
     }
 
-    System.out.println(Config.LINE_BREAK);
+    System.out.println(Config.NEW_LINE);
   }
 
   private static void watch() throws Exception {
@@ -148,18 +148,17 @@ public class Javalings {
       case Config.QUIT_OPT, Config.EXIT_OPT -> {
         quit();
 
-        System.out.println("Quitting javalings.." + Config.LINE_BREAK);
+        System.out.println("Quitting javalings.." + Config.NEW_LINE);
         System.exit(0);
       }
       case Config.NEXT_OPT -> next();
       case Config.CLEAR_OPT -> clear();
       case Config.HINT_OPT -> {
-        System.out.println(
-            colorizeMessage(Config.FIRST_TRY_ON_YOUR_OWN, Colors.CYAN_BOLD_BRIGHT) + Config.LINE_BREAK);
+        System.out.println(colorizeMessage(Config.FIRST_TRY_ON_YOUR_OWN, Colors.CYAN_B_BT) + Config.NEW_LINE);
         exerciseRunner.getExercise().printHint();
       }
       case Config.GOOGLE_OPT -> {
-        System.out.println(Config.WHAT_TO_GOOGLE + Config.LINE_BREAK);
+        System.out.println(Config.WHAT_TO_GOOGLE + Config.NEW_LINE);
         exerciseRunner.getExercise().printGoogle();
       }
       case Config.RESET_OPT -> {
@@ -235,7 +234,7 @@ public class Javalings {
 
   private static void verifyOptions(String[] options) {
     if (options.length == 0) {
-      System.out.println(colorizeMessage(Config.WELCOME, Colors.GREEN_BOLD_BRIGHT));
+      System.out.println(colorizeMessage(Config.WELCOME, Colors.GREEN_B_BT));
       System.exit(0);
     }
 
@@ -270,8 +269,8 @@ public class Javalings {
 
   private static void exitInvalidOptions(String message) {
     System.out.println(
-        colorizeMessage(message, Colors.RED) + Config.DOUBLE_LINE_BREAK + "Rerun with 'help' to see all options."
-            + Config.DOUBLE_LINE_BREAK);
+        colorizeMessage(message, Colors.RED) + Config.D_NEW_LINE + "Rerun with 'help' to see all options."
+            + Config.D_NEW_LINE);
     System.exit(0);
   }
 }

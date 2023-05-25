@@ -24,7 +24,7 @@ public class Config {
   public static final String RESET_EXERCISE_CMD = "git checkout HEAD -- %s";
   public static final String EXERCISES_INFO_PATH = "src/main/resources/exercises.json";
   public static final String EXERCISES_JAVA_BASE_PATH = "exercises/src/main/java/";
-  public static final String USAGE_DESCRIPTION = """
+  public static final String USAGE = """
       Javalings usage:
         Windows
           .\\javalings.bat <option> <option>
@@ -53,12 +53,12 @@ public class Config {
         
         Example             : ./javalings.sh reset Intro1
       """;
-  public static final String WATCH_COMMANDS_HINT =
+  public static final String WATCH_CMD_HINT =
       """
           Type 'help' to see available watch mode commands.
           Type 'hint' for a hint or 'google' for search terms.
           """;
-  public static final String WATCH_MODE_USAGE_DESCRIPTION = """
+  public static final String WATCH_MODE_USAGE = """
       Commands available to you in watch mode:
         help                : Displays this help message.
         hint                : Prints a hint for the current exercise.
@@ -106,8 +106,8 @@ public class Config {
           
           Make sure to have your editor open!
           """;
-  public static final String COMPILING_SUCCESS_MESSAGE = "=== IT IS COMPILING! ===";
-  public static final String EXERCISE_OUTPUT_TEMPLATE =
+  public static final String COMPILING_SUCCESS = "=== IT IS COMPILING! ===";
+  public static final String EXERCISE_OUTPUT =
       """
           Output:
           ========================
@@ -121,8 +121,8 @@ public class Config {
       "Remove --  " + I_AM_NOT_DONE + "  -- to complete the exercise.";
   public static final String FIRST_TRY_ON_YOUR_OWN = "!! First try to figure it out completely by yourself. !!";
   public static final String WHAT_TO_GOOGLE = "Examples what to google:";
-  public static final String LINE_BREAK = "%n".formatted();
-  public static final String DOUBLE_LINE_BREAK = "%n%n".formatted();
+  public static final String NEW_LINE = "%n".formatted();
+  public static final String D_NEW_LINE = "%n%n".formatted();
   private static final String[] OPTIONS_ARRAY = new String[]{
       HELP_OPT,
       WATCH_OPT,

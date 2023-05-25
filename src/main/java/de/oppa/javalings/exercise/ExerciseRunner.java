@@ -51,7 +51,7 @@ public class ExerciseRunner {
       Javalings.printProgress();
 
       System.out.println("%s has been completed.%n%n".formatted(exercise.getName()).indent(2));
-      System.out.println("Type next to continue with the next unsolved exercise." + Config.DOUBLE_LINE_BREAK);
+      System.out.println("Type next to continue with the next unsolved exercise." + Config.D_NEW_LINE);
 
       return;
     }
@@ -62,26 +62,25 @@ public class ExerciseRunner {
     exercise.setCompileOutput(compileOutput);
 
     if (!exercise.isCompiling()) {
-      System.out.println(colorizeMessage(" .. ERROR!" + Config.LINE_BREAK, Colors.RED_BOLD_BRIGHT));
-      System.out.printf((colorizeMessage("%s", Colors.RED_BOLD_BRIGHT)),
-          exercise.getCompileOutput().indent(2) + Config.LINE_BREAK);
+      System.out.println(colorizeMessage(" .. ERROR!" + Config.NEW_LINE, Colors.RED_B_BT));
+      System.out.printf((colorizeMessage("%s", Colors.RED_B_BT)),
+          exercise.getCompileOutput().indent(2) + Config.NEW_LINE);
       Javalings.printWatchModeCommandsHint();
 
       return;
     }
 
-    System.out.println(colorizeMessage(" .. SUCCESS!" + Config.DOUBLE_LINE_BREAK, Colors.GREEN_BOLD_BRIGHT));
-    System.out.println(
-        colorizeMessage(Config.COMPILING_SUCCESS_MESSAGE, Colors.GREEN_BOLD_BRIGHT) + Config.LINE_BREAK);
+    System.out.println(colorizeMessage(" .. SUCCESS!" + Config.D_NEW_LINE, Colors.GREEN_B_BT));
+    System.out.println(colorizeMessage(Config.COMPILING_SUCCESS, Colors.GREEN_B_BT) + Config.NEW_LINE);
 
     CliRunner.run(exercise);
 
-    System.out.println(colorizeMessage(Config.EXERCISE_OUTPUT_TEMPLATE, Colors.GREEN_BOLD_BRIGHT).formatted(
-        exercise.getRunOutput().trim()) + Config.LINE_BREAK);
+    System.out.println(
+        colorizeMessage(Config.EXERCISE_OUTPUT, Colors.GREEN_B_BT).formatted(exercise.getRunOutput().trim())
+            + Config.NEW_LINE);
 
     if (!exercise.isDone()) {
-      System.out.println(
-          colorizeMessage(Config.REMOVE_I_AM_NOT_DONE, Colors.YELLOW_BOLD_BRIGHT) + Config.LINE_BREAK);
+      System.out.println(colorizeMessage(Config.REMOVE_I_AM_NOT_DONE, Colors.YELLOW_B_BT) + Config.NEW_LINE);
       Javalings.printWatchModeCommandsHint();
     }
   }
