@@ -52,14 +52,14 @@ public class ExerciseManager {
     }
   }
 
+  public static List<String> collectExerciseNames(List<Exercise> exercises) {
+    return exercises.stream().map(exercise -> exercise.getName().toLowerCase()).toList();
+  }
+
   private static void compileAndSetResultingState(Exercise exercise) throws IOException {
     String compileOutput = CliRunner.compile(exercise.getPath());
 
     exercise.setCompiling(compileOutput.isEmpty());
     exercise.setCompileOutput(compileOutput);
-  }
-
-  public static List<String> collectExerciseNames(List<Exercise> exercises) {
-    return exercises.stream().map(exercise -> exercise.getName().toLowerCase()).toList();
   }
 }

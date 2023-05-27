@@ -29,6 +29,8 @@ run {
     standardInput = System.in
 }
 
+compileJava {options.encoding = "UTF-8"}
+
 configurations {
     compile.exclude module: 'exercises'
 }

@@ -21,9 +21,7 @@ public class Javalings {
   private static ExerciseRunner exerciseRunner;
 
   public static void main(String[] options) throws Exception {
-    exercises = ExerciseManager.readExercises();
-    exerciseNames = ExerciseManager.collectExerciseNames(exercises);
-
+    initExercises();
     lowerCaseOptions(options);
     verifyOptions(options);
     processOptions(options);
@@ -60,6 +58,11 @@ public class Javalings {
     System.out.println(Config.WATCH_CMD_HINT);
   }
 
+  private static void initExercises() throws IOException {
+    exercises = ExerciseManager.readExercises();
+    exerciseNames = ExerciseManager.collectExerciseNames(exercises);
+  }
+
   private static void processOptions(String[] options) throws Exception {
     switch (options[0]) {
       case Config.HELP_OPT -> usage(false);
@@ -82,13 +85,17 @@ public class Javalings {
   private static void list() {
     printProgress();
 
+    System.out.printf("%-15s | %-13s | %s%n", "Exercise", "compiles?",
+        "is done?");
+    System.out.println("-".repeat(43));
     for (Exercise exercise : exercises) {
       if (exercise.isDone() && exercise.isCompiling()) {
         continue;
       }
 
-      System.out.printf("%s - compiling: %b, done: %b%n", exercise.getName(), exercise.isCompiling(),
-          exercise.isDone());
+      System.out.printf("%-15s | %-13s | %s %n", exercise.getName(), exercise.isCompiling() ? "YES" : "NO",
+          exercise.isDone() ? "YES" : "NO");
+      System.out.println("- ".repeat(22));
     }
 
     System.out.println(Config.NEW_LINE);
@@ -133,14 +140,13 @@ public class Javalings {
 
   private static int findNextExerciseIndex() {
     if (exerciseRunner == null) {
-      return IntStream.range(0, exercises.size()).filter(i -> !exercises.get(i).isDone())
-          .findFirst().orElse(0);
+      return IntStream.range(0, exercises.size()).filter(i -> !exercises.get(i).isDone()).findFirst().orElse(0);
     }
 
     int currentIndex = exercises.indexOf(exerciseRunner.getExercise());
 
-    return IntStream.range(currentIndex + 1, exercises.size()).filter(i -> !exercises.get(i).isDone())
-        .findFirst().orElse(currentIndex);
+    return IntStream.range(currentIndex + 1, exercises.size()).filter(i -> !exercises.get(i).isDone()).findFirst()
+        .orElse(currentIndex);
   }
 
   private static void waitForInput() throws Exception {
@@ -262,8 +268,7 @@ public class Javalings {
       exitInvalidOptions("Option '%s' not recognised.".formatted(options[0]));
     }
 
-    if ((options[0].equals(Config.RUN_OPT) || options[0].equals(Config.HINT_OPT) || options[0].equals(Config.RESET_OPT))
-        && options.length == 1) {
+    if ((options[0].equals(Config.RUN_OPT) || options[0].equals(Config.RESET_OPT)) && options.length == 1) {
       exitInvalidOptions("Sub option for '%s' not provided.".formatted(options[0]));
     }
 
