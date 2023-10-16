@@ -27,7 +27,8 @@ public class CliRunner {
   }
 
   public static void run(Exercise exercise) throws IOException, InterruptedException {
-    Process process = Runtime.getRuntime().exec(Config.RUN_EXERCISE_CMD.formatted(exercise.getPackagedName()));
+    Process process = Runtime.getRuntime()
+        .exec(Config.RUN_EXERCISE_CMD.formatted(exercise.getPackagedName()).split(" "));
 
     exercise.setRunOutput(getProcessConsoleOutput(process.getErrorStream()));
     exercise.setRunOutput(getProcessConsoleOutput(process.getInputStream()));
