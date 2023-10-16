@@ -36,13 +36,13 @@ if (Get-Command java -ErrorAction SilentlyContinue)
 
     $javaVersion = (Get-Command java | Select-Object -ExpandProperty Version).toString();
 
-    if ($javaVersion.Contains("17") -Or $javaVersion.Contains("18") -Or $javaVersion.Contains("19") -Or $javaVersion.Contains("20") -Or $javaVersion.Contains("20"))
+    if ($javaVersion.Contains("21"))
     {
         Write-Host "SUCCESS: Java $javaVersion is installed" -ForegroundColor DarkCyan;
     }
     else
     {
-        Write-Host "ERROR: Recommended java version is 17+" -ForegroundColor Red;
+        Write-Host "ERROR: Recommended java version is 21" -ForegroundColor Red;
         Write-Host "ERROR: Javalings needs a higher java version." -ForegroundColor Red;
         exit 1
     }
@@ -50,8 +50,8 @@ if (Get-Command java -ErrorAction SilentlyContinue)
 else
 {
     Write-Host "WARNING: Java does not seem to be installed." -ForegroundColor DarkCyan;
-    Write-Host "Installing OpenJDK 17..." -ForegroundColor DarkCyan;
-    ` choco install openjdk --version=17.0.2
+    Write-Host "Installing OpenJDK 21..." -ForegroundColor DarkCyan;
+    ` choco install openjdk --version=21.0.0
 }
 Write-Host "`n"
 
