@@ -101,12 +101,7 @@ Or use a package manager:
 
 chocolatey:
 ```ps1
-choco install openjdk --version=17.0.2
-```
-
-winget:
-```ps1
-winget install -e --id ojdkbuild.openjdk.17.jdk
+choco install openjdk --version=21.0.0
 ```
 
 ### Git
