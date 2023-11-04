@@ -115,7 +115,7 @@ public class Javalings {
   private static void run(String exerciseName) throws Exception {
     Exercise exercise;
 
-    if (exerciseName.equals(Config.NEXT_OPT)) {
+    if (exerciseName.equalsIgnoreCase(Config.NEXT_OPT)) {
       int nextExerciseIndex = findNextExerciseIndex();
       if (nextExerciseIndex >= exercises.size() && exerciseRunner != null) {
         System.out.println("All Exercises have been completed. Good job!!");
@@ -128,7 +128,7 @@ public class Javalings {
       exercise = findExercise(exerciseName);
     }
 
-    if (exerciseRunner != null && exerciseName.equals(Config.NEXT_OPT)) {
+    if (exerciseRunner != null && exerciseName.equalsIgnoreCase(Config.NEXT_OPT)) {
       exerciseRunner.stop();
     }
 
@@ -212,7 +212,7 @@ public class Javalings {
   }
 
   private static void reset(String exerciseName) throws IOException, InterruptedException {
-    if (exerciseName.equals(Config.ALL_OPT)) {
+    if (exerciseName.equalsIgnoreCase(Config.ALL_OPT)) {
       System.out.println("Resetting all exercises..");
       reset();
       System.out.println("Resetting all exercises done.");
@@ -268,7 +268,7 @@ public class Javalings {
       exitInvalidOptions("Option '%s' not recognised.".formatted(options[0]));
     }
 
-    if ((options[0].equals(Config.RUN_OPT) || options[0].equals(Config.RESET_OPT)) && options.length == 1) {
+    if ((options[0].equalsIgnoreCase(Config.RUN_OPT) || options[0].equalsIgnoreCase(Config.RESET_OPT)) && options.length == 1) {
       exitInvalidOptions("Sub option for '%s' not provided.".formatted(options[0]));
     }
 

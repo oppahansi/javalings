@@ -42,7 +42,9 @@ public class CliRunner {
   }
 
   public static void resetAll() throws IOException, InterruptedException {
-    Process process = Runtime.getRuntime().exec(Config.RESET_EXERCISE_CMD.formatted(Config.EXERCISES_JAVA_BASE_PATH));
+    String[] cmds = Config.RESET_EXERCISE_CMD.formatted(Config.EXERCISES_JAVA_BASE_PATH).split(" ");
+
+    Process process = Runtime.getRuntime().exec(cmds);
     process.waitFor();
   }
 
