@@ -27,8 +27,9 @@ public class CliRunner {
   }
 
   public static void run(Exercise exercise) throws IOException, InterruptedException {
-    Process process = Runtime.getRuntime()
-        .exec(Config.RUN_EXERCISE_CMD.formatted(exercise.getPackagedName()).split(" "));
+    String[] cmds = Config.RUN_EXERCISE_CMD.formatted(exercise.getPackagedName()).split(" ");
+
+    Process process = Runtime.getRuntime().exec(cmds);
 
     exercise.setRunOutput(getProcessConsoleOutput(process.getErrorStream()));
     exercise.setRunOutput(getProcessConsoleOutput(process.getInputStream()));
@@ -37,7 +38,9 @@ public class CliRunner {
   }
 
   public static void reset(Exercise exercise) throws IOException, InterruptedException {
-    Process process = Runtime.getRuntime().exec(String.format(Config.RESET_EXERCISE_CMD, exercise.getPath()));
+    String[] cmds = Config.RESET_EXERCISE_CMD.formatted(exercise.getPath()).split(" ");
+
+    Process process = Runtime.getRuntime().exec(cmds);
     process.waitFor();
   }
 
