@@ -56,6 +56,7 @@ public class Config {
   public static final String WATCH_CMD_HINT =
       """
           Type 'help' to see available watch mode commands.
+          Type 'google' to see examples of what to google to find a solution.
           Type 'hint' for a hint or 'google' for search terms.
           """;
   public static final String WATCH_MODE_USAGE = """

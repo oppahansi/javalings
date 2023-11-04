@@ -136,7 +136,7 @@
     "name": "strings1",
     "packageName": "datatypes.strings",
     "path": "exercises/src/main/java/datatypes/strings/Strings1.java",
-    "hint": "The mathematical '+' sign works on Strings.\nInstead of 'adding' the Strings it combines the two into a new String.",
-    "google": "  java add two strings\n  java string concatenation\n  java string formatted"
+    "hint": "The mathematical '+' sign works on Strings.\nInstead of 'adding' the Strings it combines the two into a new String.\n\nThe %s is a placeholder for a String. This placeholder will be replaced with the passed in String.\nHere the order of the placeholders has to match the order of the passed in variables.",
+    "google": "  java add two strings\n  java string concatenation\n  java string formatted\n  java string methods"
   }
 ]
