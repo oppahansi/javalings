@@ -16,8 +16,6 @@
 
 # javalings ☕ 💻  (in development)  
 
---- 
-
 Greetings and welcome to `javalings`.
 
 This project contains small exercises to get you used to reading and writing Java code.  
