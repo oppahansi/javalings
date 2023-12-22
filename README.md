@@ -1,10 +1,10 @@
 <p align="middle">
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/oppahansi/javalings/dart.yml">
-    <img alt="GitHub" src="https://img.shields.io/github/license/oppahansi/better_imports">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/oppahansi/better_imports">
-    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/oppahansi/better_imports">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oppahansi/better_imports">
-    <img alt="all-contributors" src="https://img.shields.io/github/all-contributors/oppahansi/better_imports?color=ee8449&style=flat-square">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/oppahansi/javalings/build.yml">
+    <img alt="GitHub" src="https://img.shields.io/github/license/oppahansi/javalings">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/oppahansi/javalings">
+    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/oppahansi/javalings">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oppahansi/javalings">
+    <img alt="all-contributors" src="https://img.shields.io/github/all-contributors/oppahansi/javalings?color=ee8449&style=flat-square">
 
 </p>
 
