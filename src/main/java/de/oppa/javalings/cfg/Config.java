@@ -16,6 +16,9 @@ public class Config {
   public static final String NEXT_OPT = "next";
   public static final String QUIT_OPT = "quit";
   public static final String EXIT_OPT = "exit";
+
+
+
   public static final String CLEAR_OPT = "clear";
   public static final String ALL_OPT = "all";
   public static final long MONITOR_TIMEOUT = 2000;
@@ -24,6 +27,9 @@ public class Config {
   public static final String RESET_EXERCISE_CMD = "git checkout HEAD -- %s";
   public static final String EXERCISES_INFO_PATH = "src/main/resources/exercises.json";
   public static final String EXERCISES_JAVA_BASE_PATH = "exercises/src/main/java/";
+
+
+
   public static final String USAGE = """
       Javalings usage:
         Windows
