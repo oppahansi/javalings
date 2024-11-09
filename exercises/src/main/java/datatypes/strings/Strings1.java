@@ -12,23 +12,25 @@ package datatypes.strings;
 
 public class Strings1 {
 
-  public static void main(String[] args) {
-    /* Modify below */
+    public static void main(String[] args) {
+        /* Modify below */
 
-    // Create a 'String' variable named 'javalings' with the value 'javalings'
+        // Create a 'String' variable named 'javalings' with the value 'javalings'
 
-    // Create a 'String' variable named 'exercise' with the value 'exercise'
+        // Create a 'String' variable named 'exercise' with the value 'exercise'
 
-    String concat = javalings + exercise;
-    String concatWithSpaces = javalings + " " + exercise;
-    String concatFormatted = "%s %s".formatted(javalings, exercise);
-    String concatFormattedOld = String.format("%s %s", javalings, exercise);
+        String concat = javalings + exercise;
+        String concatWithSpaces = javalings + " " + exercise;
+        String concatFormatted = "%s %s".formatted(javalings, exercise);
+        String concatFormattedOld = String.format("%s %s", javalings, exercise);
 
-    /* Modify above */
-    System.out.println("concat              = " + concat);
-    System.out.println("concatWithSpaces    = " + concatWithSpaces);
-    System.out.println("concatFormatted     = " + concatFormatted);
-    System.out.println("concatFormattedOld  = " + concatFormattedOld);
+        /* Modify above */
+        System.out.println("""
+                concat              = %s
+                concatWithSpaces    = %s
+                concatFormatted     = %s
+                concatFormattedOld  = %s
+                """.formatted(concat, concatWithSpaces, concatFormatted, concatFormattedOld));
 
-  }
+    }
 }

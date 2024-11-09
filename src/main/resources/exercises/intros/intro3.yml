@@ -1,0 +1,13 @@
+name: "intro3"
+packageName: "intros"
+description: "Print 'Hello, World!' to the console."
+hint: |
+  Almost all java statements have to end with ";" a semicolon.
+  Try to find the missing ";" semicolon in the code.
+google: |
+  java statements
+  java semicolon
+  java syntax
+files:
+  - "exercises/src/main/java/intros/Intro3.java"
+expectedOutput: "I cannot compile! Something is missing.."

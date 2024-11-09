@@ -1,10 +1,12 @@
 plugins {
-    id 'application'
+    id 'java'
 }
 
-mainClassName = 'de.oppa.javalings.Javalings'
+apply plugin: 'application'
 
-group = 'de.oppa'
+mainClassName = 'de.oppa.jlings.Javalings'
+
+group = 'de.oppa.jlings'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -12,31 +14,42 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.1'
-    implementation group: 'com.ongres', name: 'fluent-process', version: '1.0.1'
+    implementation 'commons-cli:commons-cli:1.8.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.17.2'
 
-
-    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
 }
 
 run {
     standardInput = System.in
 }
 
-compileJava {options.encoding = "UTF-8"}
-
-configurations {
-    compile.exclude module: 'exercises'
-}
-
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion = JavaLanguageVersion.of(21)
     }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+subprojects {
+    if (project.name == 'exercises') {
+        tasks.withType(JavaCompile) {
+            enabled = false
+        }
+        tasks.withType(Test) {
+            enabled = false
+        }
+        tasks.withType(Jar) {
+            enabled = false
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.warnings = false
 }

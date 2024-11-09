@@ -12,19 +12,20 @@ package variables;
 
 public class Variables1 {
 
-  public static void main(String[] args) {
-    /* Modify below */
+    public static void main(String[] args) {
+        /* Modify below */
 
-    // Create a 'byte' variable named 'smallest' with the value '100'
+        // Create a 'byte' variable named 'smallest' with the value '100'
 
-    // Create a 'short' variable named 'small' with the value '30000'
+        // Create a 'short' variable named 'small' with the value '30000'
 
-    // Create an 'int' variable named 'medium' with the value '1000000000'
+        // Create an 'int' variable named 'medium' with the value '1000000000'
 
-
-    /* Modify above */
-    System.out.println("smallest has the value : " + smallest);
-    System.out.println("small has the value : " + small);
-    System.out.println("medium has the value : " + medium);
-  }
+        /* Modify above */
+        System.out.println("""
+                smallest has the value : %d
+                small has the value : %d
+                medium has the value : %d
+                """.formatted(smallest, small, medium));
+    }
 }

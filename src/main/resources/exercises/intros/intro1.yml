@@ -1,0 +1,18 @@
+name: "intro1"
+packageName: "intros"
+description: "Print 'Hello, World!' to the console."
+hint: |
+  You can print something to the console using the
+  
+    'System.out.println(...);'
+  
+  statement. Something has to go between the '(' and ')' bracers.
+  
+    System.out.println("Text goes between the quotation marks!");
+google: |
+  java hello world program
+  java how to print to console
+  java display text in console
+files:
+  - "exercises/src/main/java/intros/Intro1.java"
+expectedOutput: "Hello, world!"

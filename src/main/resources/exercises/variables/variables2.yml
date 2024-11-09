@@ -1,0 +1,17 @@
+name: "variables2"
+packageName: "variables"
+description: "Print 'Hello, World!' to the console."
+hint: |
+  Variables have a specific syntax, here is some pseudocode:
+    Datatype variableName;
+    variableName = value;
+  
+  Short version:
+    Datatype variableName = value;
+google: |
+  java primitives default values
+  java number literals
+  java number suffix
+files:
+  - "exercises/src/main/java/variables/Variables2.java"
+expectedOutput: ""

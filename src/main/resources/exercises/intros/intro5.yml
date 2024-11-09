@@ -1,0 +1,32 @@
+name: "intro5"
+packageName: "intros"
+description: "Print 'Hello, World!' to the console."
+hint: |
+  Almost all java statements have to end with ";" a semicolon.
+  Try to find the missing ";" semicolon in the code.
+  
+  Additionally:
+  A code block is a section of code enclosed in "{" and "}" curly braces.
+  Example pseudocode:
+  
+  {
+    statement;
+    statement;
+  }
+  
+  or
+  
+  class ClassName {
+    methodName() {
+      statement;
+    }
+  }
+  
+  Try to find the missing "{" or "}" curly bracers in the code.
+google: |
+  java code blocks
+  java syntax
+  java hello world program
+files:
+  - "exercises/src/main/java/intros/Intro5.java"
+expectedOutput: "I cannot compile! What is wrong with me?"

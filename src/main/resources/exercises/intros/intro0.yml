@@ -1,0 +1,9 @@
+name: "intro0"
+packageName: "intros"
+description: "Print 'Hello, World!' to the console."
+hint: "Remove '// I AM NOT DONE' from the code."
+google: ""
+files:
+  - "exercises/src/main/java/intros/Intro0.java"
+expectedOutput: ""
+    

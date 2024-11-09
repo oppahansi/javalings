@@ -1,3 +1,3 @@
 rootProject.name = 'javalings'
-include 'exercises'
-
+include 'javalings', 'exercises'
+project(':exercises').projectDir = file('exercises')

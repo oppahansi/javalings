@@ -12,27 +12,37 @@ package datatypes.primitives;
 
 public class Primitives8 {
 
-  public static void main(String[] args) {
-    /* Modify below */
+    public static void main(String[] args) {
+        /* Modify below */
 
-    // Create a 'char' variable named 'x' with the value 'X'
+        // Create a 'char' variable named 'x' with the value 'X'
 
-    // Create a 'char' variable named 'y' with the value 'Y'
+        // Create a 'char' variable named 'y' with the value 'Y'
 
-    // Fix this
-    char concat = x + y;
-    var multipleChars = "" + x + y; // Do not change this line
+        // Fix this
+        char concat = (char) (x + y);
+        var multipleChars = "" + x + y; // Do not change this line
 
-    /* Modify above */
-    System.out.println("x has the value: " + x + "\n    x is of type: " + getType(x));
-    System.out.println("\ny has the value: " + y + "\n    y is of type: " + getType(y));
-    System.out.println("\nx + y = " + concat + "\n    concat is of type: " + getType(concat));
-    System.out.println(
-        "\n\"\" + x + y = " + multipleChars + "\n    multipleChars is of type: " + getType(multipleChars));
-    System.out.println("\nDid you expect these results?");
-  }
+        /* Modify above */
+        System.out.println("""
+                x has the value: %s
+                    x is of type: %s
 
-  private static String getType(Object value) {
-    return value.getClass().getName();
-  }
+                y has the value: %s
+                    y is of type: %s
+
+                x + y = %s
+                    concat is of type: %s
+
+                "" + x + y = %s
+                    multipleChars is of type: %s
+
+                Did you expect these results?
+                """.formatted(x, getType(x), y, getType(y), concat, getType(concat), multipleChars,
+                getType(multipleChars)));
+    }
+
+    private static String getType(Object value) {
+        return value.getClass().getName();
+    }
 }

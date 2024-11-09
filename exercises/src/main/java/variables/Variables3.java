@@ -12,19 +12,20 @@ package variables;
 
 public class Variables3 {
 
-  public static void main(String[] args) {
-    /* Modify below */
+    public static void main(String[] args) {
+        /* Modify below */
 
-    // Create a 'boolean' variable named 'trueFalse' with the value 'true'
+        // Create a 'boolean' variable named 'trueFalse' with the value 'true'
 
-    // Create a 'char' variable named 'character' with the value 'D'
+        // Create a 'char' variable named 'character' with the value 'D'
 
-    // Create a 'String' variable named 'text' with the value 'Hello there!'
+        // Create a 'String' variable named 'text' with the value 'Hello there!'
 
-
-    /* Modify above */
-    System.out.println("trueFalse has the value : " + trueFalse);
-    System.out.println("character has the value : " + character);
-    System.out.println("text has the value : " + text);
-  }
+        /* Modify above */
+        System.out.println("""
+                trueFalse has the value : %b
+                character has the value : %c
+                text has the value : %s
+                """.formatted(trueFalse, character, text));
+    }
 }

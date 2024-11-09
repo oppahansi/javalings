@@ -12,13 +12,12 @@ package intros;
 
 public class Intro2 {
 
-  public static void main(String[] args) {
-    /* Modify below */
+    public static void main(String[] args) {
+        /* Modify below */
 
-    // Print out here your name
+        // Print out here your name
 
-
-    /* Modify above */
-  }
+        /* Modify above */
+    }
 
 }

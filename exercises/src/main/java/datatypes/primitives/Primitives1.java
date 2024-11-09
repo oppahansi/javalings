@@ -12,24 +12,26 @@ package datatypes.primitives;
 
 public class Primitives1 {
 
-  public static void main(String[] args) {
-    /* Modify below */
+    public static void main(String[] args) {
+        /* Modify below */
 
-    // Create a 'byte' variable named 'x' with the value '24'
+        // Create a 'byte' variable named 'x' with the value '24'
 
-    // Create a 'byte' variable named 'y' with the value '18'
+        // Create a 'byte' variable named 'y' with the value '18'
 
-    // Fix this
-    byte sum = x + y;
-    byte rest = x - y;
-    byte div = x / y;
-    byte prod = x * y;
+        // Fix this
+        byte sum = (byte) (x + y);
+        byte rest = (byte) (x - y);
+        byte div = (byte) (x / y);
+        byte prod = (byte) (x * y);
 
-    /* Modify above */
-    System.out.println("x + y = " + sum);
-    System.out.println("x - y = " + rest);
-    System.out.println("x / y = " + div + ", did you expect this?");
-    System.out.println("x * y = " + prod + ", did you expect this?");
-  }
+        /* Modify above */
+        System.out.println("""
+                x + y = %d
+                x - y = %d
+                x / y = %d, did you expect this?
+                x * y = %d, did you expect this?
+                """.formatted(sum, rest, div, prod));
+    }
 
 }

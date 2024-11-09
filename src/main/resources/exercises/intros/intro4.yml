@@ -1,0 +1,28 @@
+name: "intro4"
+packageName: "intros"
+description: "Print 'Hello, World!' to the console."
+hint: |
+  A code block is a section of code enclosed in "{" and "}" curly braces.
+  Example pseudocode:
+  
+  {
+    statement;
+    statement;
+  }
+  
+  or
+  
+  class ClassName {
+    methodName() {
+      statement;
+    }
+  }
+  
+  Try to find the missing "{" or "}" curly bracers in the code.
+google: |
+  java code blocks
+  java syntax
+  java curly bracers
+files:
+  - "exercises/src/main/java/intros/Intro4.java"
+expectedOutput: "I cannot compile! Something is missing again.."

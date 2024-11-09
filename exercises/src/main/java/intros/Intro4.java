@@ -11,7 +11,7 @@ package intros;
 // I AM NOT DONE
 
 public class Intro4 {
-  /* Modify below */
+    /* Modify below */
 
   public static void main(String[] args)
 
@@ -20,5 +20,3 @@ public class Intro4 {
   /* Modify above */
   }
 }
-
-
