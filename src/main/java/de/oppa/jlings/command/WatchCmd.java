@@ -16,6 +16,7 @@ public class WatchCmd implements CmdArgs {
     @Override
     public void execute(String option) {
         var manager = ExManager.getInstance();
+
         if (option == null || option.isBlank() || option.equals("all")) {
             manager.getExercises().forEach(this::watchExercise);
         } else {
@@ -33,18 +34,33 @@ public class WatchCmd implements CmdArgs {
 
         watcher.watch(exercise, () -> checkState(exercise, manager, verifier));
 
+        processInput(watcher);
+    }
+
+    private void processInput(ExWatcher watcher) {
         var console = System.console();
         if (console != null) {
-            // Use console for reading input
             while (running) {
-                String input = console.readLine();
+                try {
+                    if (!console.reader().ready()) {
+                        continue;
+                    }
 
-                processInput(watcher, input);
+                    String input = console.readLine();
+
+                    processInput(watcher, input);
+                } catch (IOException e) {
+                    throw new IllegalStateException("Error reading input", e);
+                }
+
             }
         } else {
-            // Fallback to BufferedReader for reading input
             try (var reader = new BufferedReader(new InputStreamReader(System.in))) {
                 while (running) {
+                    if (!reader.ready()) {
+                        continue;
+                    }
+
                     String input = reader.readLine();
 
                     processInput(watcher, input);

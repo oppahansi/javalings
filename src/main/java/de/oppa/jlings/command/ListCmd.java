@@ -10,16 +10,19 @@ public class ListCmd implements CmdArgs {
         var manager = ExManager.getInstance();
 
         if (option == null || option.isBlank() || option.isEmpty() || "all".equalsIgnoreCase(option)) {
-            manager.getStates().forEach((state) -> {
+            manager.getNameToState().forEach((state) -> {
                 var status = (state.isSolved() ? Colors.GREEN + "solved" : Colors.RED + "unsolved") + Colors.RESET;
                 CliPrinter.print(state.getExercise().name() + " - " + status);
             });
         } else if ("unsolved".equalsIgnoreCase(option)) {
-            manager.getUnsolved().forEach(exercise -> System.out.println(exercise.name()));
+            manager.getUnsolved().forEach(exercise -> CliPrinter.print(exercise.name()));
         } else if ("solved".equalsIgnoreCase(option)) {
-            manager.getSolved().forEach(exercise -> System.out.println(exercise.name()));
+            manager.getSolved().forEach(exercise -> CliPrinter.print(exercise.name()));
         } else if ("extended".equalsIgnoreCase(option)) {
-            manager.getStates().forEach(System.out::println);
+            manager.getNameToState().forEach((state) -> {
+                var status = (state.isSolved() ? Colors.GREEN + "solved" : Colors.RED + "unsolved") + Colors.RESET;
+                CliPrinter.print(state.getExercise().name() + " - " + status);
+            });
         } else {
             CliPrinter.print("Invalid option for list command: " + option);
         }

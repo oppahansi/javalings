@@ -9,7 +9,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -19,11 +18,11 @@ import de.oppa.jlings.cfg.Cfg;
 public class ExManager {
     private static ExManager instance;
 
-    private final Map<String, ExState> states;
+    private final Map<String, ExState> nameToState;
     private final Map<Integer, String> orderToName;
 
     private ExManager() {
-        states = new HashMap<>();
+        nameToState = new HashMap<>();
         orderToName = new HashMap<>();
 
         readExerciseOrder();
@@ -46,37 +45,37 @@ public class ExManager {
     }
 
     public Exercise getExercise(String name) {
-        if (!states.containsKey(name)) {
+        if (!nameToState.containsKey(name)) {
             throw new IllegalArgumentException("Exercise not found: " + name);
         }
 
-        return states.get(name).getExercise();
+        return nameToState.get(name).getExercise();
     }
 
-    public List<ExState> getStates() {
-        return states.values().stream()
+    public List<ExState> getNameToState() {
+        return nameToState.values().stream()
                 .sorted(Comparator.comparingInt(ExState::getOrder))
                 .toList();
     }
 
     public ExState getState(int order) {
-        return states.get(orderToName.get(order));
+        return nameToState.get(orderToName.get(order));
     }
 
     public ExState getState(String name) {
-        return states.get(name);
+        return nameToState.get(name);
     }
 
     public boolean isSolved(int order) {
-        return states.get(orderToName.get(order)).isSolved();
+        return nameToState.get(orderToName.get(order)).isSolved();
     }
 
     public boolean isSolved(String name) {
-        return states.get(name).isSolved();
+        return nameToState.get(name).isSolved();
     }
 
     public List<Exercise> getSolved() {
-        return states.values().stream()
+        return nameToState.values().stream()
                 .sorted(Comparator.comparingInt(ExState::getOrder))
                 .filter(ExState::isSolved)
                 .map(ExState::getExercise)
@@ -84,7 +83,7 @@ public class ExManager {
     }
 
     public List<Exercise> getUnsolved() {
-        return states.values().stream()
+        return nameToState.values().stream()
                 .sorted(Comparator.comparingInt(ExState::getOrder))
                 .filter(state -> !state.isSolved())
                 .map(ExState::getExercise)
@@ -92,7 +91,7 @@ public class ExManager {
     }
 
     public List<Exercise> getExercises() {
-        return states.values().stream()
+        return nameToState.values().stream()
                 .sorted(Comparator.comparingInt(ExState::getOrder))
                 .map(ExState::getExercise)
                 .toList();
@@ -142,7 +141,13 @@ public class ExManager {
         Path exercisesPath;
 
         try {
-            exercisesPath = Paths.get(Objects.requireNonNull(classLoader.getResource("exercises")).toURI());
+            var url = classLoader.getResource("exercises");
+
+            if (url == null) {
+                throw new IllegalStateException("Error locating exercises directory");
+            }
+
+            exercisesPath = Paths.get(url.toURI());
         } catch (Exception e) {
             throw new IllegalStateException("Error locating exercises directory", e);
         }
@@ -158,7 +163,7 @@ public class ExManager {
 
                             var exercise = mapper.readValue(inputStream, Exercise.class);
 
-                            states.put(exercise.name(),
+                            nameToState.put(exercise.name(),
                                     new ExState(exercise, new CompileResult(null), new RunResult(null, null),
                                             getOrder(exercise.name()), false, false));
 

@@ -55,7 +55,7 @@ public class VerifyCmd implements CmdArgs {
         var verifier = new ExVerifier();
         var solvedCounter = 0;
 
-        for (var state : manager.getStates()) {
+        for (var state : manager.getNameToState()) {
             verifier.verify(state);
 
             if (state.isSolved() && state.isDone()) {
@@ -63,7 +63,7 @@ public class VerifyCmd implements CmdArgs {
             }
 
             CliPrinter.clear();
-            CliPrinter.printProgressBar(solvedCounter, manager.getStates().size());
+            CliPrinter.printProgressBar(solvedCounter, manager.getNameToState().size());
         }
     }
 

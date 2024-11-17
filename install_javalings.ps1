@@ -12,7 +12,7 @@ else
 {
     Write-Host "WARNING: Chocolatey does not seem to be installed." -ForegroundColor DarkCyan;
     Write-Host "Installing Chocolatey package manager.." -ForegroundColor DarkCyan;
-    ` Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    ` Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 }
 Write-Host "`n"
 
@@ -51,7 +51,7 @@ else
 {
     Write-Host "WARNING: Java does not seem to be installed." -ForegroundColor DarkCyan;
     Write-Host "Installing OpenJDK 21..." -ForegroundColor DarkCyan;
-    ` choco install openjdk --version=21.0.0
+    ` choco install openjdk --version=21.0.2
 }
 Write-Host "`n"
 
@@ -79,7 +79,7 @@ Write-Host "Cloning javalings repository..." -ForegroundColor DarkCyan;
 ` git clone https://github.com/oppahansi/javalings.git
 Write-Host "`n"
 
-` cd javalings/
+` Set-Location javalings/
 
 Write-Host "All done! Run '.\javalings.bat watch' to get started." -ForegroundColor DarkCyan;
 Write-Host "In case you saw any red text / errors, please make sure to rerun the install script with admin rights." -ForegroundColor Cyan;

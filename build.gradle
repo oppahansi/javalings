@@ -1,10 +1,10 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
-apply plugin: 'application'
-
-mainClassName = 'de.oppa.jlings.Javalings'
+application {
+   mainClass.set("de.oppa.jlings.Javalings")
+ }
 
 group = 'de.oppa.jlings'
 version = '1.0-SNAPSHOT'
