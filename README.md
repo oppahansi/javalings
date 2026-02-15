@@ -8,13 +8,9 @@
 
 </p>
 
-<p align="middle">
-<img alt="GitHub last commit" src="https://img.shields.io/badge/status-in%20development-blue">
-</p>
+# javalings ☕ 💻
 
-# javalings ☕ 💻  (in development)  
-
-Greetings and welcome to `javalings`.
+Greetings and welcome to `javalings`. (PROOF OF CONCEPT)
 
 This project contains small exercises to get you used to reading and writing Java code.  
 This includes reading and responding to compiler messages!  
